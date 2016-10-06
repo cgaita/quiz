@@ -1,0 +1,31 @@
+body{
+	background-color:#DDE5E4;
+}
+.title{
+	width: 600px;
+	height: 76px;
+	margin: auto;
+	margin-top: 50px;
+	text-align: center;
+	font-family:'Poiret One', cursive ; 
+	font-size: 53px;
+	color: #B76B45;
+}
+#start_page p{
+	width: 550px;
+	height: 76px;
+	margin: auto;
+	margin-top: 80px;
+	text-align: center;
+	
+}
+.wrapper{
+	text-align: center;
+}
+#questions p{
+	text-align: center;
+	font-size: 20px;
+
+}
+
+B75C30
