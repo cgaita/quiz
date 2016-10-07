@@ -29,7 +29,7 @@ body{
 	text-align: center;
 	/*font-family: 'Playfair Display', serif;*/
 }
-h2{
+h2 {
 	/*font-family: 'Playfair Display', serif;*/
 	font-family: 'Cinzel', serif;
 	
@@ -37,11 +37,17 @@ h2{
 	color: #B76B45;
 	font-size: 30px;
 }
-/*#questions{
+h3{
+	text-align: center;
+	color: #B76B45;
+	font-size: 15px;
+}
+
+#questions{
 	display: none;
 }
 #results{
 	display: none;
-}*/
+}
 
 B75C30

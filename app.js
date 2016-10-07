@@ -10,12 +10,16 @@ $(document).ready(function(){
 	$('#Start').click(function(){
 	$('#start_page').hide();
 	$('#questions').show();
+	displayQuestions();
 	$('#results').hide();
 	});
+
 });
 /*function takeQuiz(){
 	$('#Start').click
 }*/
+var allQuestions = ["question1", "question2", "question3", "question4", "question5"];
+
 //objects 
 var question1 = {
 	text: "What is the cat’s name?",
@@ -42,3 +46,22 @@ var question5 = {
 	answers: ["September", "July", "October", "August"],
 	correctAnswer: 1
 }
+function displayQuestions(){
+
+ };
+
+function changeQuestion(){
+	$('#Next').click(function(){
+
+	});
+};
+
+
+
+
+
+
+
+
+
+
