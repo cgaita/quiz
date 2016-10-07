@@ -5,17 +5,20 @@ body{
 	width: 600px;
 	height: 76px;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 90px;
 	text-align: center;
 	font-family:'Poiret One', cursive ; 
 	font-size: 53px;
 	color: #B76B45;
 }
+#start_page img{
+	margin-top: 70px;
+}
 #start_page p{
 	width: 550px;
 	height: 76px;
 	margin: auto;
-	margin-top: 80px;
+	margin-top: 150px;
 	text-align: center;
 	
 }
@@ -24,8 +27,21 @@ body{
 }
 #questions p{
 	text-align: center;
+	/*font-family: 'Playfair Display', serif;*/
+}
+h2{
+	/*font-family: 'Playfair Display', serif;*/
+	font-family: 'Cinzel', serif;
 	
-
+	text-align: center;
+	color: #B76B45;
+	font-size: 30px;
+}
+#questions{
+	display: none;
+}
+#results{
+	display: none;
 }
 
 B75C30
