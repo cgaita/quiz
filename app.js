@@ -8,9 +8,9 @@
 */
 $(document).ready(function(){
 	$('#Start').click(function(){
-		$('#start_page').hide();
-		$('#questions').show();
-		$('#results').hide();
+	$('#start_page').hide();
+	$('#questions').show();
+	$('#results').hide();
 	});
 });
 /*function takeQuiz(){
