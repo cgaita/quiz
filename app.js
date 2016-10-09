@@ -7,18 +7,24 @@
 6. retake
 */
 $(document).ready(function(){
-	$('#Start').click(function(){
-	$('#start_page').hide();
-	$('#questions').show();
-	displayQuestions();
-	$('#results').hide();
+	$('#start').click(function(){
+		$('#start_page').hide();
+		$('#questions_page').show();
+		displayQuestions();
+		$('#results').hide();
+		selectAnswer();
 	});
-
+	$('#next').click(function(){
+		$('.questions .text').html("");
+		$('.questions ul').html("");
+		changeQuestion();
+		selectAnswer();
+		});
+	
 });
 /*function takeQuiz(){
-	$('#Start').click
+	$('#start').click
 }*/
-var allQuestions = ["question1", "question2", "question3", "question4", "question5"];
 
 //objects 
 var question1 = {
@@ -27,8 +33,8 @@ var question1 = {
 	correctAnswer: 3
 }
 var question2 = {
-	text: "What Sanderson sister is the last to die?",
-	answers: ["Mary", "Winnie", "Sarah", "Alison"],
+	text: "What Sanderson sister is the first to die at the end of the film?",
+	answers: ["Sarah", "Winnie", "Mary", "Alison"],
 	correctAnswer: 0
 }
 var question3 = {
@@ -46,16 +52,30 @@ var question5 = {
 	answers: ["September", "July", "October", "August"],
 	correctAnswer: 1
 }
-function displayQuestions(){
+var allQuestions = [question1, question2, question3, question4, question5];
+var currentQuestionIndex = 0;
 
+function displayQuestions(){
+	var currentQuestion = allQuestions[currentQuestionIndex];
+	$('.text').html(currentQuestion.text);
+	var answersText ="";
+	var answers = currentQuestion.answers;
+	for(var i=0; i <= answers.length -1; i++){
+		answersText=answersText + '<li class="answers '+ i +'"> ' + answers[i] + '</li>'
+	}
+$('ul').append(answersText);
  };
 
-function changeQuestion(){
-	$('#Next').click(function(){
-
+function selectAnswer(){
+	$('.answers').click(function(e){
+		//console.log(e);
+		console.log($(e.target).hasClass(allQuestions[currentQuestionIndex].correctAnswer));
 	});
 };
-
+function changeQuestion(){
+	currentQuestionIndex++;
+	displayQuestions();
+};
 
 
 

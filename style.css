@@ -25,7 +25,13 @@ body{
 .wrapper{
 	text-align: center;
 }
-#questions p{
+.text{
+	text-align: center;
+	width: 300px;
+	margin: 0 auto;
+
+}
+.questions p{
 	text-align: center;
 	/*font-family: 'Playfair Display', serif;*/
 }
@@ -43,7 +49,11 @@ h3{
 	font-size: 15px;
 }
 
-#questions{
+ul{
+	width: 300px;
+	margin: 0 auto;
+}
+#questions_page{
 	display: none;
 }
 #results{
