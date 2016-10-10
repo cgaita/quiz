@@ -1,13 +1,15 @@
 /*
-1. list question one at a time
-2. pick answer
-3. track question number
-4. no skipping
-5. give score at end
-6. retake
+~1. list question one at a time
+~2. pick answer
+~3. give feedback
+4. track question number
+5. no skipping
+6. give score at end
+7. retake
 */
 $(document).ready(function(){
-	$('#start').click(function(){
+	takeQuiz();
+	/*$('#start').click(function(){
 		$('#start_page').hide();
 		$('#questions_page').show();
 		displayQuestions();
@@ -19,13 +21,9 @@ $(document).ready(function(){
 		$('.questions ul').html("");
 		changeQuestion();
 		selectAnswer();
-		});
+		});*/
 	
 });
-/*function takeQuiz(){
-	$('#start').click
-}*/
-
 //objects 
 var question1 = {
 	text: "What is the cat’s name?",
@@ -60,22 +58,52 @@ function displayQuestions(){
 	$('.text').html(currentQuestion.text);
 	var answersText ="";
 	var answers = currentQuestion.answers;
-	for(var i=0; i <= answers.length -1; i++){
-		answersText=answersText + '<li class="answers '+ i +'"> ' + answers[i] + '</li>'
+	for (var i=0; i <= answers.length -1; i++){
+		answersText=answersText + '<li class="answers '+ i +'"><button class="button '+ i +'"></button>' + answers[i] + '</li>'
 	}
-$('ul').append(answersText);
+	$('ul').append(answersText);
+	if (currentQuestionIndex === allQuestions.length){
+		$('#questions_page').hide();
+		$('#results').show();
+	}
  };
 
 function selectAnswer(){
 	$('.answers').click(function(e){
-		//console.log(e);
-		console.log($(e.target).hasClass(allQuestions[currentQuestionIndex].correctAnswer));
+		var feedback = $(e.target).hasClass(allQuestions[currentQuestionIndex].correctAnswer);
+		if (feedback === true){
+			$('.feedback').html("Correct Answer!");
+		}
+		else {
+			$('.feedback').html("Incorrect!");
+		}
 	});
 };
 function changeQuestion(){
 	currentQuestionIndex++;
 	displayQuestions();
+	$('.feedback').html("");
 };
+function takeQuiz(){
+	$('#start').click(function(){
+		$('#start_page').hide();
+		$('#questions_page').show();
+		$('#results').hide();
+		displayQuestions();
+		selectAnswer();
+	});
+	$('#next').click(function(){
+		$('.questions .text').html("");
+		$('.questions ul').html("");
+		changeQuestion();
+		selectAnswer();
+		});
+};
+/*function retakeQuiz(){
+	$('#retake').click(function(){
+	
+	});
+};*/
 
 
 
