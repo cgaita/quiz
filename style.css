@@ -48,6 +48,7 @@ h3{
 	color: #B76B45;
 	font-size: 15px;
 }
+
 .feedback{
 	text-align: center;
 }
@@ -57,6 +58,9 @@ ul{
 }
 .answers{
 	list-style: none;
+}
+.button:focus {
+    border: 2px solid white;
 }
 #questions_page{
 	display: none;

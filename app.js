@@ -4,8 +4,9 @@
 ~3. give feedback
 4. track question number
 5. no skipping
-6. give score at end
-7. retake
+6. only picking one answer
+7. give score at end
+8. retake
 */
 $(document).ready(function(){
 	takeQuiz();
@@ -62,11 +63,13 @@ function displayQuestions(){
 		answersText=answersText + '<li class="answers '+ i +'"><button class="button '+ i +'"></button>' + answers[i] + '</li>'
 	}
 	$('ul').append(answersText);
-	if (currentQuestionIndex === allQuestions.length){
+}
+
+/* shows results page after questions
+if (currentQuestionIndex === allQuestions.length){
 		$('#questions_page').hide();
 		$('#results').show();
-	}
- };
+	}*/
 
 function selectAnswer(){
 	$('.answers').click(function(e){
@@ -78,11 +81,16 @@ function selectAnswer(){
 			$('.feedback').html("Incorrect!");
 		}
 	});
+
 };
 function changeQuestion(){
 	currentQuestionIndex++;
 	displayQuestions();
 	$('.feedback').html("");
+	//track progress not working
+	/*$('#progress').html(function(){
+		
+		});*/
 };
 function takeQuiz(){
 	$('#start').click(function(){
@@ -99,14 +107,12 @@ function takeQuiz(){
 		selectAnswer();
 		});
 };
-/*function retakeQuiz(){
+/* restart quiz set all back to 0
+function retakeQuiz(){
 	$('#retake').click(function(){
 	
 	});
 };*/
-
-
-
 
 
 
