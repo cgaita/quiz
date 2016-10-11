@@ -65,12 +65,14 @@ function displayQuestions(){
 	$('ul').append(answersText);
 }
 
-/* shows results page after questions
-if (currentQuestionIndex === allQuestions.length){
+// shows results page after questions
+	$('#next').click(function(){
+		if (currentQuestionIndex === allQuestions.length -1){
 		$('#questions_page').hide();
 		$('#results').show();
-	}*/
-
+		};
+	});
+	
 function selectAnswer(){
 	$('.answers').click(function(e){
 		var feedback = $(e.target).hasClass(allQuestions[currentQuestionIndex].correctAnswer);
@@ -88,9 +90,12 @@ function changeQuestion(){
 	displayQuestions();
 	$('.feedback').html("");
 	//track progress not working
-	/*$('#progress').html(function(){
+	/*
+		$('#progress').html(function(){
 		
-		});*/
+		});
+	
+	*/
 };
 function takeQuiz(){
 	$('#start').click(function(){
