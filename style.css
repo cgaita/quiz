@@ -52,21 +52,19 @@ h3{
 .feedback{
 	text-align: center;
 }
-ul{
+form{
 	width: 300px;
 	margin: 0 auto;
 }
 .answers{
 	list-style: none;
 }
-.button:focus {
+/*.button:focus {
     border: 2px solid white;
-}
+}*/
 #questions_page{
 	display: none;
 }
 #results{
 	display: none;
 }
-
-B75C30
