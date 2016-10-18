@@ -59,12 +59,25 @@ form{
 .answers{
 	list-style: none;
 }
+.score{
+	color: #B76B45;
+	margin-top: 115px;
+}
+.again{
+	margin-top: 30px;
+}
 /*.button:focus {
     border: 2px solid white;
 }*/
 #questions_page{
 	display: none;
+	padding-top: 145px;
 }
 #results{
 	display: none;
+	text-align: center;
+	font-size: 15px;
+}
+#results img{
+	margin-top: 70px;
 }
